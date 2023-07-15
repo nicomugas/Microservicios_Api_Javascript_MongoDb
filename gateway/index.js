@@ -9,26 +9,26 @@ app.use(morgan("dev"));
 
 
 app.use("/characters", createProxyMiddleware({
-	//target:"http://starwars-characters:8001",
-	target:"http://localhost:8001/",
+	target:"http://starwars-characters:8001",
+	//target:"http://localhost:8001/",
 	changeOrigin:true
 })),
 
 app.use("/films", createProxyMiddleware({
-	//target:"http://starwars-films:8002",
-	target:"http://localhost:8002/",
+	target:"http://starwars-films:8002",
+	//target:"http://localhost:8002/",
 	changeOrigin:true
 })),
 
 app.use("/planets", createProxyMiddleware({
-	//target:"http://starwars-planets:8003",
-	target:"http://localhost:8003/",
+	target:"http://starwars-planets:8003",
+	//target:"http://localhost:8003/",
 	changeOrigin:true
 })),
 
 app.use("/database", createProxyMiddleware({
-	//target:"http://starwars-database:8004",
-	target:"http://localhost:8004/",
+	target:"http://starwars-database:8004",
+	//target:"http://localhost:8004/",
 	changeOrigin:true
 }))
 
