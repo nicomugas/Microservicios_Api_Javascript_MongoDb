@@ -20,10 +20,10 @@ Puerta de entrada a la aplicación.
 
 
 ## 🛠 Skills
-Javascript, MongoDb, Express, Docker 
+Javascript, MongoDb, Express, Docker, Docker-Compose, Google Cloud
 
 
-En desarrollo. 
+
 
 
 ## Deploy
@@ -78,5 +78,28 @@ BODY
   surface_water: String,
   residents: [{ type: String, ref: "Characters" }],
   films: [{ type: String, ref: "Films" }],
-
 ```
+
+## Local Installation
+
+
+```bash
+ clonar
+ https://github.com/nicomugas/Microservicios_Api_Javascript_MongoDb.git
+```
+Varialbes de entorno 
+
+```bash
+/database
+
+MONGO_URI
+```
+
+```bash
+en directorio principal ejecutar
+docker-compose build 
+docker-compose up
+```
+Datos de prueba para subir a BD 
+dentro de los microservicios de character, film, planet
+src/data/xxxxx.json 
