@@ -12,13 +12,10 @@ module.exports = async (req, res) => {
   if (model === "Film") {
     const response = await store.Film.insert(body);
     res.status(200).json(response);
-    
   }
 
   if (model === "Planet") {
     const response = await store.Planet.insert(body);
     res.status(200).json(response);
   }
-  // const response = await store[model].get(id);
-  // res.status(200).json(response)
 };

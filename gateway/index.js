@@ -27,7 +27,8 @@ app.use("/planets", createProxyMiddleware({
 })),
 
 app.use("/database", createProxyMiddleware({
-	target:"http://starwars-database:8004",
+	//target:"http://starwars-database:8004",
+	target:"http://localhost:8004/",
 	changeOrigin:true
 }))
 

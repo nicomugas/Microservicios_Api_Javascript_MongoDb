@@ -1,19 +1,17 @@
-const characters = require('./characters.json')
-//import axios from "axios";
-const axios = require("axios")
+
+
+const axios = require("axios");
 
 module.exports = {
-    list: async () => {
+  list: async () => {
+    const datos = await axios.get("http://localhost:8004/Character");
+    console.log(datos);
+    return datos.data;
+  },
 
-        console.log("estoy en list");
-        //return characters;
-       // return axios.get("http://starwars-database:8004")
-      const datos= await axios.get("http://localhost:8004/Character")
-      console.log(datos);
-       return datos.data
-    },
-
-    create: async() =>{
-        throw Error("hubo error")
-    }
-}
+  create: async (body) => {
+    const datos = await axios.post("http://localhost:8004/Character", body);
+    console.log(datos.data);
+    return datos.data;
+  },
+};

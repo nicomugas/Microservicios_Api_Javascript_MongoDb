@@ -1,10 +1,7 @@
 const Character = require("../data");
-const {response} = require('../utils')
- 
-module.exports = async (req,res) => {
+const { response } = require("../utils");
 
-    console.log("estoy en get characters");
-    const characters = await Character.list();
-    console.log(characters);
-    response(res,200,characters)
-}
+module.exports = async (req, res) => {
+  const characters = await Character.list();
+  response(res, 200, characters);
+};

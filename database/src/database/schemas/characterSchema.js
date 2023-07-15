@@ -21,7 +21,7 @@ characterSchema.statics.list =async function (){
 }
 
 characterSchema.statics.insert = async function(character){
-    console.log(character);
+    console.log("sfsfsdf", character);
     return await this.create(character)
 }
 
